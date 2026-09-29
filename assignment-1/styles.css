@@ -1,0 +1,11 @@
+.cv {
+    display: flex;
+}
+
+.contactandintro {
+    width: 30%;
+}
+
+.main {
+    width: 70%;
+}
