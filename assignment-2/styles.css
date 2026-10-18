@@ -1,0 +1,393 @@
+/* Custom styles load after Bootstrap so the cascade applies the brand theme. */
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("assets/fonts/proxima-nova-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("assets/fonts/proxima-nova-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --color-ink: #171717;
+  --color-muted: #656565;
+  --color-line: #e6e6e6;
+  --color-paper: #fff;
+  --color-soft: #f5f5f5;
+  --color-offer: #ff6b00;
+  --bs-body-font-family: "Proxima Nova", Arial, sans-serif;
+  --bs-body-color: var(--color-ink);
+  --bs-body-bg: var(--color-paper);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-underline-offset: 0.2em;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 5px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -5rem;
+  left: 1rem;
+  z-index: 20;
+  padding: 0.75rem 1rem;
+  background: var(--color-paper);
+}
+
+.skip-link:focus {
+  top: 0.5rem;
+}
+
+.site-container {
+  width: 100%;
+  max-width: 1440px;
+  padding-inline: 1rem;
+  margin-inline: auto;
+}
+
+.announcement {
+  padding: 0.45rem 2rem;
+  background: var(--color-offer);
+  color: #fff;
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 1.15;
+}
+
+.announcement p {
+  max-width: 38rem;
+  margin: 0 auto;
+}
+
+.site-header {
+  position: relative;
+  z-index: 5;
+  background: var(--color-paper);
+}
+
+.site-navbar {
+  padding: 0;
+}
+
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 3.5rem;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.navbar-brand {
+  margin: 0;
+  padding: 0;
+}
+
+.brand-logo {
+  display: block;
+  width: 7.4rem;
+}
+
+.mobile-tools,
+.header-actions {
+  display: flex;
+  flex: 0 0 5rem;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.header-actions {
+  justify-content: flex-end;
+}
+
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.3rem;
+  height: 2.75rem;
+  padding: 0.35rem;
+  border: 0;
+  background: transparent;
+  color: var(--color-ink);
+  text-decoration: none;
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.cart-button {
+  gap: 0.1rem;
+  width: auto;
+}
+
+.cart-count {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-size: 0.65rem;
+}
+
+/* Native details/summary provides a keyboard-accessible menu without scripts. */
+.mobile-menu summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+.mobile-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.mobile-menu[open] .mobile-menu-panel {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  padding: 0.5rem 1rem 1rem;
+  border-bottom: 1px solid var(--color-line);
+  background: var(--color-paper);
+  box-shadow: 0 8px 12px #0000000a;
+}
+
+.navbar-nav .nav-link {
+  padding-block: 0.65rem;
+  color: var(--color-ink);
+  font-size: 0.95rem;
+}
+
+.navbar-nav .nav-link:hover,
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.hero-link,
+.hero picture,
+.hero img {
+  display: block;
+  width: 100%;
+}
+
+.hero img {
+  aspect-ratio: 5 / 6;
+  object-fit: cover;
+}
+
+.section-space {
+  padding-block: 2.5rem;
+}
+
+.section-title {
+  margin: 0 0 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.section-intro,
+.stage-note {
+  color: var(--color-muted);
+}
+
+.section-intro {
+  margin: 0;
+}
+
+.stage-note {
+  max-width: 38rem;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.breadcrumb {
+  --bs-breadcrumb-divider: "/";
+  margin-bottom: 2rem;
+  font-size: 0.85rem;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+}
+
+.product-foundation {
+  min-height: 20rem;
+}
+
+.site-footer {
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--color-line);
+  background: var(--color-soft);
+}
+
+.footer-title {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-links a {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.footer-contact {
+  font-size: 0.95rem;
+  color: var(--color-muted);
+}
+
+.footer-contact p {
+  margin-bottom: 1rem;
+}
+
+.footer-contact address {
+  margin: 0;
+  font-style: normal;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  margin-top: 2.5rem;
+  padding-block: 1.5rem;
+  border-top: 1px solid #dcdcdc;
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+/* Tablet: wider gutters and the landscape version of the reference banner. */
+@media (min-width: 768px) {
+  .site-container {
+    padding-inline: 2rem;
+  }
+
+  .announcement {
+    min-height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+  }
+
+  .header-inner {
+    min-height: 4.5rem;
+  }
+
+  .brand-logo {
+    width: 9.5rem;
+  }
+
+  .hero img {
+    aspect-ratio: 25 / 6;
+  }
+
+  .section-space {
+    padding-block: 3.5rem;
+  }
+
+  .section-title {
+    font-size: 1.875rem;
+  }
+
+  .site-footer {
+    padding-top: 3.5rem;
+  }
+}
+
+/* Bootstrap's xl navbar breakpoint leaves space for all desktop links. */
+@media (min-width: 1200px) {
+  .site-container {
+    padding-inline: 4.5rem;
+  }
+
+  .header-inner {
+    min-height: 4.75rem;
+    flex-wrap: nowrap;
+    gap: 1.5rem;
+  }
+
+  .brand-logo {
+    width: 10.5rem;
+  }
+
+  .desktop-nav {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .desktop-nav .navbar-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 0.5rem;
+  }
+
+  .navbar-expand-xl .navbar-nav .nav-link {
+    padding-inline: 0.5rem;
+  }
+
+  .header-actions {
+    flex-basis: auto;
+    gap: 0.5rem;
+  }
+}
