@@ -60,7 +60,7 @@
       </div>
     </div>
   </header>
-  <main class="site-container section-space product-foundation" id="main-content">
+  <main class="site-container section-space product-detail" id="main-content">
     <nav aria-label="Breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="index.html">Home</a></li>
@@ -68,10 +68,66 @@
         <li class="breadcrumb-item active" aria-current="page">Salicylic Acid + LHA 2% Cleanser</li>
       </ol>
     </nav>
-    <h1 class="section-title">Salicylic Acid + LHA 2% Cleanser</h1>
-    <!-- Stage 3: the Bootstrap product gallery and purchase layout will be added here. -->
-    <p class="stage-note">The product image, description, price, and purchase layout will be added in stage 3.</p>
-    <a href="index.html#catalogue">Back to Best Sellers</a>
+    <div class="row g-4 g-lg-5 detail-layout">
+      <div class="col-12 col-md-6">
+        <figure class="detail-gallery">
+          <img class="detail-image" src="assets/images/salicylic-cleanser-large.jpg" srcset="assets/images/salicylic-cleanser.jpg 640w, assets/images/salicylic-cleanser-large.jpg 1100w" sizes="(min-width: 1440px) 624px, (min-width: 1200px) calc(50vw - 96px), (min-width: 768px) calc(50vw - 44px), calc(100vw - 32px)" alt="Minimalist Salicylic Acid + LHA 2% Cleanser, 100ml white bottle with a black cap" width="1100" height="1600" fetchpriority="high">
+          <span class="product-badge detail-badge">Best Seller</span>
+          <figcaption class="visually-hidden">Salicylic Acid + LHA 2% Cleanser — 100ml</figcaption>
+        </figure>
+      </div>
+      <section class="col-12 col-md-6 detail-content" aria-labelledby="detail-title">
+        <h1 class="detail-title" id="detail-title">Salicylic Acid + LHA 2% Cleanser</h1>
+        <p class="detail-subtitle">Deep cleansing for acne-prone, oily skin</p>
+        <p class="detail-description">An everyday exfoliating face wash with 2% BHA + LHA. Salicylic Acid and Capryloyl Salicylic Acid work together to clear congested pores and remove excess oil, while a gentle cleansing base helps keep skin comfortable.</p>
+        <ul class="detail-benefits" aria-label="Formula highlights">
+          <li>Fragrance Free</li>
+          <li>Non-comedogenic</li>
+          <li>Essential Oil Free</li>
+          <li>pH: 4.5–5.5</li>
+        </ul>
+        <div class="detail-size">
+          <p class="detail-label" id="size-label">Size</p>
+          <span class="size-option">100ml</span>
+        </div>
+        <div class="detail-pricing">
+          <p class="detail-label">Price</p>
+          <p class="detail-price"><span class="visually-hidden">Sale price:</span> ₹ 269 <s><span class="visually-hidden">MRP:</span>₹ 299</s> <span class="detail-discount">10% Off</span></p>
+          <p class="detail-tax">(incl. of all taxes)</p>
+        </div>
+        <div class="purchase-row">
+          <div class="quantity-control">
+            <label class="detail-label" for="quantity">Quantity</label>
+            <input class="form-control quantity-input" id="quantity" name="quantity" type="number" min="1" step="1" value="1" inputmode="numeric">
+          </div>
+          <button class="btn btn-dark detail-add-to-cart" type="button" aria-label="Add Salicylic Acid + LHA 2% Cleanser to cart">Add to Cart</button>
+        </div>
+        <div class="detail-accordions">
+          <details class="detail-accordion">
+            <summary>What Makes It Potent?</summary>
+            <div class="detail-accordion-content">
+              <p>BHA cleans inside pores, while LHA exfoliates at the surface. The formula also includes Zinc PCA, Panthenol, and Allantoin, alongside mild, sulfate-free cleansing agents.</p>
+            </div>
+          </details>
+          <details class="detail-accordion">
+            <summary>Ideal For</summary>
+            <div class="detail-accordion-content">
+              <dl class="detail-facts">
+                <div><dt>Skin type</dt><dd>Oily, combination, and acne-prone skin</dd></div>
+                <div><dt>Concerns</dt><dd>Excess oil, congested pores, and breakouts</dd></div>
+              </dl>
+            </div>
+          </details>
+          <details class="detail-accordion">
+            <summary>How to Use</summary>
+            <div class="detail-accordion-content">
+              <p>Lather a small amount in damp hands, gently massage onto a wet face, and rinse well. Use as part of your morning or evening cleansing routine.</p>
+            </div>
+          </details>
+        </div>
+        <a class="back-to-products" href="index.html#catalogue">← Back to Best Sellers</a>
+      </section>
+    </div>
   </main>
   <footer class="site-footer">
     <div class="site-container">
