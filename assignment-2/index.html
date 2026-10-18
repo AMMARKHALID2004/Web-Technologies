@@ -72,9 +72,132 @@
     </section>
     <section class="site-container section-space" id="catalogue" aria-labelledby="catalogue-title">
       <h2 class="section-title" id="catalogue-title">Our Best Sellers</h2>
-      <p class="section-intro">Science-backed skincare. Honest ingredients. Visible results.</p>
-      <!-- Stage 2: the responsive Bootstrap product grid will be added here. -->
-      <p class="stage-note">The product collection will be added in the next stage.</p>
+      <!-- Bootstrap controls the number of columns at each screen width. -->
+      <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3 g-lg-4 product-grid">
+        <div class="col">
+          <article class="card product-card h-100" aria-labelledby="product-cleanser">
+            <a class="product-image-link" href="product.html">
+              <img class="card-img-top product-image" src="assets/images/salicylic-cleanser.jpg" alt="Minimalist Salicylic Acid + LHA 2% Cleanser bottle" width="640" height="931" loading="lazy">
+              <span class="product-badge">Best Seller</span>
+            </a>
+            <div class="card-body product-info">
+              <h3 class="product-name" id="product-cleanser"><a href="product.html">Salicylic Acid + LHA 2% Cleanser</a></h3>
+              <p class="product-concern">Acne, Breakouts &amp; Oiliness</p>
+              <p class="product-size">100ml</p>
+              <p class="product-price"><span class="visually-hidden">Sale price:</span> ₹ 269 <s><span class="visually-hidden">Regular price:</span>₹ 299</s></p>
+              <button class="btn btn-dark add-to-cart" type="button" aria-label="Add Salicylic Acid + LHA 2% Cleanser to cart">Add to Cart</button>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <article class="card product-card h-100" aria-labelledby="product-sunscreen">
+            <a class="product-image-link" href="https://beminimalist.co/products/multi-vitamin-spf-50">
+              <img class="card-img-top product-image" src="assets/images/spf50-sunscreen.jpg" alt="Minimalist SPF 50 Sunscreen tube" width="640" height="931" loading="lazy">
+              <span class="product-badge">Best Seller</span>
+            </a>
+            <div class="card-body product-info">
+              <h3 class="product-name" id="product-sunscreen"><a href="https://beminimalist.co/products/multi-vitamin-spf-50">SPF 50 Sunscreen</a></h3>
+              <p class="product-concern">Sun protection, UV exposure / damage</p>
+              <p class="product-size">50g</p>
+              <p class="product-price"><span class="visually-hidden">Sale price:</span> ₹ 359 <s><span class="visually-hidden">Regular price:</span>₹ 399</s></p>
+              <button class="btn btn-dark add-to-cart" type="button" aria-label="Add SPF 50 Sunscreen to cart">Add to Cart</button>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <article class="card product-card h-100" aria-labelledby="product-b5">
+            <a class="product-image-link" href="https://beminimalist.co/products/vitamin-b5-10-moisturizer">
+              <img class="card-img-top product-image" src="assets/images/vitamin-b5-moisturizer.png" alt="Minimalist Vitamin B5 10% Moisturizer tube" width="640" height="931" loading="lazy">
+              <span class="product-badge">Best Seller</span>
+            </a>
+            <div class="card-body product-info">
+              <h3 class="product-name" id="product-b5"><a href="https://beminimalist.co/products/vitamin-b5-10-moisturizer">Vitamin B5 10% Moisturizer</a></h3>
+              <p class="product-concern">Damaged Barrier, Oily &amp; Dehydrated</p>
+              <p class="product-size">50g</p>
+              <p class="product-price"><span class="visually-hidden">Sale price:</span> ₹ 314 <s><span class="visually-hidden">Regular price:</span>₹ 349</s></p>
+              <button class="btn btn-dark add-to-cart" type="button" aria-label="Add Vitamin B5 10% Moisturizer to cart">Add to Cart</button>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <article class="card product-card h-100" aria-labelledby="product-niacinamide">
+            <a class="product-image-link" href="https://beminimalist.co/products/niacinamide-10-with-matmarine">
+              <img class="card-img-top product-image" src="assets/images/niacinamide-serum.png" alt="Minimalist Niacinamide 10% Face Serum dropper bottle" width="640" height="931" loading="lazy">
+              <span class="product-badge">Best Seller</span>
+            </a>
+            <div class="card-body product-info">
+              <h3 class="product-name" id="product-niacinamide"><a href="https://beminimalist.co/products/niacinamide-10-with-matmarine">Niacinamide 10% Face Serum</a></h3>
+              <p class="product-concern">Acne Marks, Acne Prone &amp; Oily Skin</p>
+              <p class="product-size">30ml</p>
+              <p class="product-price"><span class="visually-hidden">Sale price:</span> ₹ 539 <s><span class="visually-hidden">Regular price:</span>₹ 599</s></p>
+              <button class="btn btn-dark add-to-cart" type="button" aria-label="Add Niacinamide 10% Face Serum to cart">Add to Cart</button>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <article class="card product-card h-100" aria-labelledby="product-vitamin-c">
+            <a class="product-image-link" href="https://beminimalist.co/products/vitamin-c-ethyl-ascorbic-acid-10-acetyl-glucosamine-1">
+              <img class="card-img-top product-image" src="assets/images/vitamin-c-serum.png" alt="Minimalist Vitamin C 10% Face Serum dropper bottle" width="640" height="931" loading="lazy">
+              <span class="product-badge">Best Seller</span>
+            </a>
+            <div class="card-body product-info">
+              <h3 class="product-name" id="product-vitamin-c"><a href="https://beminimalist.co/products/vitamin-c-ethyl-ascorbic-acid-10-acetyl-glucosamine-1">Vitamin C 10% Face Serum</a></h3>
+              <p class="product-concern">Dullness, Spots &amp; Loss of Elasticity</p>
+              <p class="product-size">10ml</p>
+              <p class="product-price"><span class="visually-hidden">Sale price:</span> ₹ 285 <s><span class="visually-hidden">Regular price:</span>₹ 299</s></p>
+              <button class="btn btn-dark add-to-cart" type="button" aria-label="Add Vitamin C 10% Face Serum to cart">Add to Cart</button>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <article class="card product-card h-100" aria-labelledby="product-salicylic-serum">
+            <a class="product-image-link" href="https://beminimalist.co/products/salicylic-acid-2">
+              <img class="card-img-top product-image" src="assets/images/salicylic-serum.png" alt="Minimalist Salicylic Acid 2% Face Serum dropper bottle" width="640" height="931" loading="lazy">
+              <span class="product-badge">Best Seller</span>
+            </a>
+            <div class="card-body product-info">
+              <h3 class="product-name" id="product-salicylic-serum"><a href="https://beminimalist.co/products/salicylic-acid-2">Salicylic Acid 2% Face Serum</a></h3>
+              <p class="product-concern">Acne, Oily Skin, Blackheads &amp; Irritation</p>
+              <p class="product-size">30ml</p>
+              <p class="product-price"><span class="visually-hidden">Sale price:</span> ₹ 494 <s><span class="visually-hidden">Regular price:</span>₹ 549</s></p>
+              <button class="btn btn-dark add-to-cart" type="button" aria-label="Add Salicylic Acid 2% Face Serum to cart">Add to Cart</button>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <article class="card product-card h-100" aria-labelledby="product-alpha-arbutin">
+            <a class="product-image-link" href="https://beminimalist.co/collections/best-sellers/products/alpha-arbutin-2">
+              <img class="card-img-top product-image" src="assets/images/alpha-arbutin-serum.png" alt="Minimalist Alpha Arbutin 2% Face Serum dropper bottle" width="640" height="931" loading="lazy">
+              <span class="product-badge">Best Seller</span>
+            </a>
+            <div class="card-body product-info">
+              <h3 class="product-name" id="product-alpha-arbutin"><a href="https://beminimalist.co/collections/best-sellers/products/alpha-arbutin-2">Alpha Arbutin 2% Face Serum</a></h3>
+              <p class="product-concern">Hyperpigmentation, Tanning &amp; Sunspot</p>
+              <p class="product-size">30ml</p>
+              <p class="product-price"><span class="visually-hidden">Sale price:</span> ₹ 494 <s><span class="visually-hidden">Regular price:</span>₹ 549</s></p>
+              <button class="btn btn-dark add-to-cart" type="button" aria-label="Add Alpha Arbutin 2% Face Serum to cart">Add to Cart</button>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <article class="card product-card h-100" aria-labelledby="product-marula">
+            <a class="product-image-link" href="https://beminimalist.co/collections/best-sellers/products/marula-05-moisturizer">
+              <img class="card-img-top product-image" src="assets/images/marula-moisturizer.png" alt="Minimalist Marula Oil 5% Face Moisturizer tube" width="640" height="931" loading="lazy">
+              <span class="product-badge">Best Seller</span>
+            </a>
+            <div class="card-body product-info">
+              <h3 class="product-name" id="product-marula"><a href="https://beminimalist.co/collections/best-sellers/products/marula-05-moisturizer">Marula Oil 5% Face Moisturizer</a></h3>
+              <p class="product-concern">Dry Skin, Flakiness &amp; Tightness</p>
+              <p class="product-size">50g</p>
+              <p class="product-price"><span class="visually-hidden">Sale price:</span> ₹ 269 <s><span class="visually-hidden">Regular price:</span>₹ 299</s></p>
+              <button class="btn btn-dark add-to-cart" type="button" aria-label="Add Marula Oil 5% Face Moisturizer to cart">Add to Cart</button>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="catalogue-bottom">
+        <a class="btn btn-outline-dark catalogue-link" href="https://beminimalist.co/collections/best-sellers">View all products</a>
+      </div>
     </section>
   </main>
   <footer class="site-footer">

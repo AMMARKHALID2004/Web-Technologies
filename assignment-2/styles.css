@@ -245,6 +245,125 @@ summary:focus-visible {
   font-size: 0.9rem;
 }
 
+/* Bootstrap supplies the responsive column widths; Flexbox aligns card content. */
+.product-grid {
+  margin-top: 0.5rem;
+}
+
+.product-card {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.product-image-link {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  background: #eeeeec;
+}
+
+.product-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 11 / 16;
+  border-radius: 0;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+
+.product-image-link:hover .product-image {
+  transform: scale(1.025);
+}
+
+.product-badge {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 0.25rem 0.55rem;
+  border-radius: 2rem;
+  background: #000;
+  color: var(--color-paper);
+  font-size: 0.7rem;
+  line-height: 1.2;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.85rem 0 0;
+}
+
+.product-name {
+  min-height: 3.6em;
+  margin: 0 0 0.4rem;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.product-name a {
+  text-decoration: none;
+}
+
+.product-name a:hover {
+  text-decoration: underline;
+}
+
+.product-concern {
+  min-height: 4.2em;
+  margin-bottom: 0.5rem;
+  color: var(--color-muted);
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.product-size {
+  margin-bottom: 0.5rem;
+  color: var(--color-muted);
+  font-size: 0.8rem;
+}
+
+.product-price {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.product-price s {
+  color: var(--color-muted);
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.add-to-cart {
+  --bs-btn-bg: #000;
+  --bs-btn-border-color: #000;
+  width: 100%;
+  min-height: 2.75rem;
+  margin-top: auto;
+  padding: 0.65rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.85rem;
+  line-height: 1.3;
+}
+
+.catalogue-bottom {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+.catalogue-link {
+  padding: 0.75rem 2rem;
+  border-radius: 0.25rem;
+}
+
 .breadcrumb {
   --bs-breadcrumb-divider: "/";
   margin-bottom: 2rem;
@@ -350,8 +469,39 @@ summary:focus-visible {
     font-size: 1.875rem;
   }
 
+  .product-name {
+    min-height: 2.4em;
+    font-size: 1.125rem;
+  }
+
+  .product-concern {
+    min-height: 2.8em;
+    font-size: 0.875rem;
+  }
+
+  .product-badge {
+    top: 0.75rem;
+    right: 0.75rem;
+    padding: 0.35rem 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  .add-to-cart {
+    font-size: 1rem;
+  }
+
   .site-footer {
     padding-top: 3.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .product-image {
+    transition: none;
+  }
+
+  .product-image-link:hover .product-image {
+    transform: none;
   }
 }
 
