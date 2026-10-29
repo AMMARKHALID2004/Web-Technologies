@@ -37,6 +37,7 @@ Each product can be added at most three times (`(N mod 4) + 2`). Reaching the li
 - `checkout.css` - responsive form grid and interaction-only validation styling.
 - `script.js` - cart array, badge, mini-cart rendering, removal, totals, and per-product limits.
 - `README.md` - this submission documentation.
+- `../FA24-BCS-137-midterm.pdf` - required screenshots and pasted code evidence.
 
 ## AI tools used
 
