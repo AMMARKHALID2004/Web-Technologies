@@ -1,3 +1,4 @@
+// N = 37, so the per-product limit is (37 mod 4) + 2 = 3
 const cart = [];
 const productLimit = 3;
 const cartButton = document.querySelector(".cart-button");
@@ -9,30 +10,33 @@ function productDetails(button) {
   const displayedPrice = card.querySelector(".product-price").textContent.match(/\d[\d,]*/)[0];
   return {
     name: card.querySelector(".product-name").textContent.trim(),
-    price: Number(displayedPrice.replace(",", "")),
-    button
+    price: Number(displayedPrice.replace(/,/g, "")),
   };
 }
 
 function renderCart() {
   cartCount.textContent = cart.length;
   cartButton.setAttribute("aria-label", `Shopping cart, ${cart.length} item${cart.length === 1 ? "" : "s"}`);
+
   const total = cart.reduce((sum, item) => sum + item.price, 0);
+
   const counts = new Map();
   cart.forEach((item) => counts.set(item.name, (counts.get(item.name) || 0) + 1));
+
   document.querySelectorAll(".add-to-cart").forEach((button) => {
-    const name = productDetails(button).name;
-    const reached = (counts.get(name) || 0) >= productLimit;
+    const reached = (counts.get(productDetails(button).name) || 0) >= productLimit;
     button.disabled = reached;
     button.textContent = reached ? "Limit reached" : "Add to Cart";
   });
-  miniCart.innerHTML = `<h2>Your cart</h2>${cart.length ? `<ul>${cart.map((item, index) => `<li><span>${item.name} — ₹ ${item.price}</span><button class="remove-item" type="button" data-index="${index}">Remove</button></li>`).join("")}</ul><p class="mini-cart-total">Total: ₹ ${total}</p>` : "<p>Your cart is empty.</p>"}<a class="mini-cart-checkout" href="checkout.html">Checkout</a>`;
-  miniCart.querySelectorAll(".remove-item").forEach((button) => {
-    button.addEventListener("click", () => {
-      cart.splice(Number(button.dataset.index), 1);
-      renderCart();
-    });
-  });
+
+  const items = cart
+    .map((item, index) => `<li><span>${item.name} — ₹ ${item.price}</span><button class="remove-item" type="button" data-index="${index}">Remove</button></li>`)
+    .join("");
+
+  miniCart.innerHTML =
+    `<h2>Your cart</h2>` +
+    (cart.length ? `<ul>${items}</ul><p class="mini-cart-total">Total: ₹ ${total}</p>` : `<p>Your cart is empty.</p>`) +
+    `<a class="mini-cart-checkout" href="checkout.html">Checkout</a>`;
 }
 
 document.querySelectorAll(".add-to-cart").forEach((button) => {
@@ -42,7 +46,16 @@ document.querySelectorAll(".add-to-cart").forEach((button) => {
   });
 });
 
-cartButton.addEventListener("click", () => {
+// One delegated listener: Remove buttons are re-created on every render
+miniCart.addEventListener("click", (event) => {
+  const remove = event.target.closest(".remove-item");
+  if (!remove) return;
+  cart.splice(Number(remove.dataset.index), 1);
+  renderCart();
+});
+
+cartButton.addEventListener("click", (event) => {
+  event.preventDefault(); // the icon is a link to checkout; here it toggles the panel
   miniCart.hidden = !miniCart.hidden;
 });
 

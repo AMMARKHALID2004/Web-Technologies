@@ -20,7 +20,7 @@ At widths below 637px, the same four groups are available as independent, closed
 
 I added `checkout.html` with Contact and Delivery fieldsets, labels connected to every control, the requested phone pattern, and a delivery date constrained from 2026-10-29 through 2026-12-05.
 
-`checkout.css` uses `:user-invalid` so messages and red borders appear only after interaction. The fieldsets become a two-column CSS Grid with label columns at BP and wider, and a single stacked layout below BP.
+The checkout styles in `styles.css` use `:user-invalid` so messages and red borders appear only after interaction. The fieldsets become a two-column CSS Grid with label columns at BP and wider, and a single stacked layout below BP.
 
 ## Task 3 - JavaScript cart
 
@@ -32,9 +32,8 @@ Each product can be added at most three times (`(N mod 4) + 2`). Reaching the li
 
 - `index.html` - desktop/mobile category navigation, cart panel mount, and script link.
 - `product.html` - matching desktop/mobile category navigation and cart panel mount.
-- `styles.css` - mega-menu, responsive breakpoint, accent color, and mini-cart styling.
+- `styles.css` - shared layout, mega-menu, mini-cart, and checkout styling.
 - `checkout.html` - semantic checkout form and HTML5 constraints.
-- `checkout.css` - responsive form grid and interaction-only validation styling.
 - `script.js` - cart array, badge, mini-cart rendering, removal, totals, and per-product limits.
 - `README.md` - this submission documentation.
 - `../FA24-BCS-137-midterm.pdf` - required screenshots and pasted code evidence.
