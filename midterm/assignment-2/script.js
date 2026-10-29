@@ -6,9 +6,10 @@ const miniCart = document.querySelector(".mini-cart");
 
 function productDetails(button) {
   const card = button.closest(".product-card");
+  const displayedPrice = card.querySelector(".product-price").textContent.match(/\d[\d,]*/)[0];
   return {
     name: card.querySelector(".product-name").textContent.trim(),
-    price: Number(card.querySelector(".product-price").textContent.replace(/[^\d]/g, "")),
+    price: Number(displayedPrice.replace(",", "")),
     button
   };
 }
