@@ -72,7 +72,7 @@ legend {
   padding-block: 0.75rem;
 }
 
-@media (min-width: 638px) {
+@media (min-width: 637px) {
   .checkout-fields {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
